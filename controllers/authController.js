@@ -3,7 +3,6 @@ const jwt = require("jsonwebtoken");
 
 // handle errors
 const handleErrors = (err) => {
-  console.log(err.message, err.code);
   let errors = { email: "", password: "" };
 
   // duplicate error code
@@ -21,6 +20,7 @@ const handleErrors = (err) => {
   return errors;
 };
 
+// time in seconds - 3 days
 const maxAge = 3 * 24 * 60 * 60;
 
 const createToken = (id) => {
